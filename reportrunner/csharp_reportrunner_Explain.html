@@ -1,0 +1,93 @@
+<HTML>
+ <HEAD>
+<!--
+Licensed Materials - Property of IBM
+
+IBM Cognos Products: DOCS
+
+(C) Copyright IBM Corp. 2005, 2008
+
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with
+IBM Corp.
+-->
+  <META name="Copyright (C) 2008 Cognos ULC, an IBM Company. All rights reserved.">
+  <META name="Cognos (R) is a trademark of Cognos ULC, (formerly Cognos Incorporated)">
+  <TITLE>IBM Cognos Software Development Kit C# reportrunner Program Sample</TITLE>
+	  <link rel="STYLESHEET" type="text/css" href="../../../webcontent/samples/samplesFonts.css">
+ </HEAD>
+
+
+<BODY>
+
+<p class="headerTitle"><img src="../../../webcontent/samples/sdk/asp/images/go_logo_small.gif">&nbsp;IBM Cognos Sample Programs</p>
+
+<p class="FormLabel">reportrunner.sln - Run a Report and Save the Output in HTML Format.</p>
+
+<p class="formText">The C# reportrunner sample program lets you specify a report to be run and the results saved in HTML format.<br><br>
+Requirements:<br>
+- IBM Cognos Software Development Kit<br>
+- .NET Framework Version 3 or later<br>
+- a running IBM Cognos server<br>
+- the IBM Cognos samples databases and samples deployment archive must be installed and configured (if you do not specify a report name on the command-line)<br>
+- appropriate permissions set up for the Anonymous account, or a user specified on the command-line</p>
+<br>
+
+<!-- * * * * * * * * * -->
+<!--                   -->
+<!-- Dependent Files   -->
+<!--                   -->
+<!-- * * * * * * * * * -->
+<p class="FormLabel">Dependent Files</p>
+
+<p class="formText">All associated files are contained in the bin directory of the csharp directory.</p>
+
+
+<!-- * * * * * * * * * -->
+<!--                   -->
+<!-- How To Run        -->
+<!--                   -->
+<!-- * * * * * * * * * -->
+<p class="FormLabel">How To Run The Sample Program</p>
+
+<p class="formText">Launch the command window and navigate to the sample program bin directory in the csharp directory.<br>Type reportrunner.exe<br>The options for the command are:<br>
+-host hostName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Host name of an IBM Cognos server.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default: localhost<br>
+-port portNumber&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Port number of the IBM Cognos server 'host'.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default: 9300<br>
+-report searchPath&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Search path for a report in the content store.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default: /content/folder[@name='Samples']/folder[@name='Models']/package[@name='GO Data Warehouse (query)']/folder[@name='SDK Report Samples']/report[@name='Product Description List']<br>
+-output outputPath&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;File name for the output HTML document.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default: reportrunner.html<br>
+-user userName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;User to log on as. Must exist in 'userNamespace'.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default: Anonymous<br>
+-password userPassword&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Password for 'userName' in 'userNamespace'.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default: none<br>
+-namespace userNamespace&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ID of security namespace to log on to.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default: none<br><br>
+
+A new window will be opened.</p>
+
+
+<!-- * * * * * * * * * -->
+<!--                   -->
+<!-- Expected Results  -->
+<!--                   -->
+<!-- * * * * * * * * * -->
+<p class="FormLabel">Expected Results</p>
+
+<p class="formText">The report is saved in HTML format with the name specified or the default name reportrunner.html<br> <br><br></p>
+<p class="formText">This sample does not demonstrate working with parameters or prompts. Select a report that does not prompt for parameter values.</p>
+
+
+<!-- * * * * * * * * * -->
+<!--                   -->
+<!-- Documentation     -->
+<!--                   -->
+<!-- * * * * * * * * * -->
+<p class="FormLabel">Documentation</p>
+
+<p class="formText">The IBM Cognos Software Development Kit Developer Guide contains additional information about the samples. See the chapter titled 'Methods' and the appendix titled 'Code Samples and Language-Specific Coding Practices'.</p>
+<p class="formText">Please note that the samples are not intended to be treated as end-user applications. Refer to the sample code for examples of how to use the API when developing your own applications.</p>
+</BODY>
+</HTML>
+

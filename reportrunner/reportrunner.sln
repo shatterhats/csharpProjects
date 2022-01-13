@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+// Licensed Materials - Property of IBM
+// 
+// IBM Cognos Products: DOCS
+// 
+// (C) Copyright IBM Corp. 2005, 2012
+// 
+// US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with
+// IBM Corp.
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reportrunner", "reportrunner.csproj", "{34742E26-013B-4509-A934-1D19C0F23E62}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34742E26-013B-4509-A934-1D19C0F23E62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34742E26-013B-4509-A934-1D19C0F23E62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34742E26-013B-4509-A934-1D19C0F23E62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34742E26-013B-4509-A934-1D19C0F23E62}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

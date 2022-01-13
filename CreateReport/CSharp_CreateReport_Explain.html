@@ -1,0 +1,84 @@
+<HTML>
+ <HEAD>
+<!--
+Licensed Materials - Property of IBM
+
+IBM Cognos Products: DOCS
+
+(C) Copyright IBM Corp. 2005, 2008
+
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with
+IBM Corp.
+-->
+  <TITLE>IBM Cognos Software Development Kit C# createReport Program Sample</TITLE>
+	  <link rel="STYLESHEET" type="text/css" href="../../../webcontent/samples/samplesFonts.css">
+ </HEAD>
+
+
+<BODY>
+
+<p class="headerTitle"><img src="../../../webcontent/samples/sdk/asp/images/go_logo_small.gif">&nbsp;IBM Cognos Sample Programs</p>
+
+<p class="FormLabel">createReport.sln - Create a new report in IBM Cognos Connection</p>
+
+<p class="formText">The C# createReport sample program contains methods to create a new report in the content store.</p>
+<br>
+
+<!-- * * * * * * * * * -->
+<!--                   -->
+<!-- Dependent Files   -->
+<!--                   -->
+<!-- * * * * * * * * * -->
+<p class="FormLabel">Dependent Files</p>
+
+<p class="formText">All associated files are contained in the bin directory of the csharp directory.</p>
+
+
+<!-- * * * * * * * * * -->
+<!--                   -->
+<!-- How To Run        -->
+<!--                   -->
+<!-- * * * * * * * * * -->
+<p class="FormLabel">How To Run The Sample Program</p>
+
+<p class="formText">Double click on the file ..\csharp\bin\createReport.exe.<br><br>
+A window will be opened containing:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;- Create Report command button<br>
+&nbsp;&nbsp;&nbsp;&nbsp;- URL text box<br>
+&nbsp;&nbsp;&nbsp;&nbsp;- Results Display Window <br>
+
+
+Click on the 'Create Report' button to begin the sample program and display a dialog box that will prompt for a report name. Then select the
+table name and the associated report columns to be used. Click 'Run' to create the new report.
+Once the new report has been added to IBM Cognos Connection, the report specification is executed and
+the result is saved to the current working directory.</p>
+
+<p class="formText">The sample has been coded to work with the Go Sales (query) package.<br>
+To work with another package, you may need to edit the createReportDlg.cs to select nodes differently.<br>
+(Edit "tableNodes = root.SelectNodes("//folder/folder")")</p>
+
+
+<!-- * * * * * * * * * -->
+<!--                   -->
+<!-- Expected Results  -->
+<!--                   -->
+<!-- * * * * * * * * * -->
+<p class="FormLabel">Expected Results</p>
+
+<p class="formText">A new report will be created in IBM Cognos Connection and the report specification
+will be executed.</p>
+
+
+
+<!-- * * * * * * * * * -->
+<!--                   -->
+<!-- Documentation     -->
+<!--                   -->
+<!-- * * * * * * * * * -->
+<p class="FormLabel">Documentation</p>
+
+<p class="formText">The IBM Cognos Software Development Kit Developer Guide contains additional information about the samples. See the chapter titled 'Methods' and the appendix titled 'Code Samples and Language-Specific Coding Practices'.</p>
+<p class="formText">Please note that the samples are not intended to be treated as end-user applications. Refer to the sample code for examples of how to use the API when developing your own applications.</p>
+</BODY>
+</HTML>
+

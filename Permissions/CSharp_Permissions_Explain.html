@@ -1,0 +1,98 @@
+<HTML>
+ <HEAD>
+<!--
+Licensed Materials - Property of IBM
+
+IBM Cognos Products: DOCS
+
+(C) Copyright IBM Corp. 2005, 2008
+
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with
+IBM Corp.
+-->
+  <TITLE>IBM Cognos Software Development Kit C# Permission Program Sample</TITLE>
+	  <link rel="STYLESHEET" type="text/css" href="../../../webcontent/samples/samplesFonts.css">
+ </HEAD>
+
+
+<BODY>
+
+<p class="headerTitle"><img src="../../../webcontent/samples/sdk/asp/images/go_logo_small.gif">&nbsp;IBM Cognos Sample Programs</p>
+
+<p class="FormLabel">permissions.sln - Modifies permissions in IBM Cognos Connection</p>
+
+<p class="formText">The C# Permissions sample program modifies permissions.</p>
+<br>
+
+<!-- * * * * * * * * * -->
+<!--                   -->
+<!-- Dependent Files   -->
+<!--                   -->
+<!-- * * * * * * * * * -->
+<p class="FormLabel">Dependent Files</p>
+
+<p class="formText">All associated files are contained in the bin directory of the csharp directory.</p>
+
+
+
+<!-- * * * * * * * * * -->
+<!--                   -->
+<!-- How To Run        -->
+<!--                   -->
+<!-- * * * * * * * * * -->
+<p class="FormLabel">How To Run The Sample Program</p>
+
+<p class="FormLabel">Initial Setup:</p>
+<p class="formText">
+1. Log on to IBM Cognos Connection as an administrator.<br>
+2. In the folder <b>Public Folders>Samples>Models</b>, click the <b>GO Sales (query)</b> package.<br>
+3. For the Report Studio Report Samples folder, click Set Properties.<br>
+4. Click the <b>Permissions</b> tab.<br>
+5. Select the <b>Override the access permissions acquired from the parent entry</b> checkbox.<br>
+6. Click the <b>Add</b> button.<br>
+7. Click the name of the namespace that includes the user for which you want to modify permissions.<br>
+8. Select the <b>Show users in the list</b> checkbox.<br>
+9. Select the checkbox of the user that you want to add, and click <b>Add</b>.<br>
+ The user now appears in the lower pane named <b>Entries to be added</b>.<br>
+10. In this lower pane, select the checkbox of the user that you just added, and click <b>OK</b>.<br>
+The user now appears in the list. The user has no permissions.<br>
+11. Select the checkbox of the user that you just added.<br>
+12. In the Grant and Deny pane on the right side of the page, select the <b>Read</b> checkbox under the
+Grant column, and click <b>OK</b>.
+    The user is now granted Read permission.
+
+</p>
+
+<p class="formText">Double click on the file ../bin/permissions.exe.<br><br>
+A window will be opened containing:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;- Set Permissions command button<br>
+&nbsp;&nbsp;&nbsp;&nbsp;- URL text box<br>
+&nbsp;&nbsp;&nbsp;&nbsp;- Results Display Window <br>
+
+
+Click on the 'Set Permissions' button to run the sample program.</p>
+
+
+<!-- * * * * * * * * * -->
+<!--                   -->
+<!-- Expected Results  -->
+<!--                   -->
+<!-- * * * * * * * * * -->
+<p class="FormLabel">Expected Results</p>
+
+<p class="formText">By default, read permission will be denied to the Report Studio Report Samples folder.</p>
+
+
+
+<!-- * * * * * * * * * -->
+<!--                   -->
+<!-- Documentation     -->
+<!--                   -->
+<!-- * * * * * * * * * -->
+<p class="FormLabel">Documentation</p>
+
+<p class="formText">The IBM Cognos Software Development Kit Developer Guide contains additional information about the samples. See the chapter titled 'Methods' and the appendix titled 'Code Samples and Language-Specific Coding Practices'.</p>
+<p class="formText">Please note that the samples are not intended to be treated as end-user applications. Refer to the sample code for examples of how to use the API when developing your own applications.</p>
+</BODY>
+</HTML>
+
