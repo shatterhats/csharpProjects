@@ -1,0 +1,70 @@
+# ASP.NET Core (.NET Framework)
+
+# Build and test ASP.NET Core projects targeting the full .NET Framework.
+# Add steps that publish symbols, save build artifacts, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+
+trigger:
+- master
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+
+
+steps:
+
+- task: NexusIqPipelineTask@1
+  displayName: 'Nexus IQ Eval - Source Files'
+  inputs:
+    nexusIqService: 'iq.ngrok.io'
+    applicationId: 'dotnetcore-react'
+    stage: 'build'
+    scanTargets: '**/*.nupkg, **/*.dll, **/*.js'
+
+- task: NuGetToolInstaller@1
+
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '$(solution)'
+    restoreDirectory: 'packages'    
+
+- task: NexusIqPipelineTask@1
+  displayName: 'Nexus IQ Eval - Nuget'
+  inputs:
+    nexusIqService: 'iq.ngrok.io'
+    applicationId: 'dotnetcore-react'
+    stage: 'stage-release'
+    scanTargets: '**/*.nupkg, **/*.js'
+
+- task: VSBuild@1
+  inputs:
+    solution: '$(solution)'
+    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+- task: NexusIqPipelineTask@1
+  displayName: 'Nexus IQ Eval - Release'
+  inputs:
+    nexusIqService: 'iq.ngrok.io'
+    applicationId: 'dotnetcore-react'
+    stage: 'release'
+    scanTargets: '**/*.js, **/Release/**/*.dll'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'dotnetcore-react'
+    publishLocation: 'Container'
+
+
+    
+# - task: VSTest@2
+#   inputs:
+#     platform: '$(buildPlatform)'
+#     configuration: '$(buildConfiguration)'
